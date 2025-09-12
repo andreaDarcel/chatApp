@@ -31,14 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'chat.apps.Chatconfig.Chat'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'chat',
+    'chat.apps.ChatConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +76,7 @@ WSGI_APPLICATION = 'chatapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db_sqlite3',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
