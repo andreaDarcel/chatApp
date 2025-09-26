@@ -1,0 +1,9 @@
+{{truncatechars_html:50 }}</p>
+        <p><strong>Time:</strong> {{ message.time }}</p>
+        {% if message.is_deleted %}
+            <p><em>This message has been deleted.</em></p>
+        {% endif %}
+    </div>
+{% empty %}
+    <p>No messages in this room yet.</p>
+{% endfor %}
